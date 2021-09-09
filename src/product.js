@@ -7,6 +7,12 @@ var Product = /** @class */ (function () {
         this.make = make;
         this.model = model;
     }
+    Product.prototype.equals = function (other) {
+        return this.name === other.name &&
+            this.serial_number === other.serial_number &&
+            this.make === other.make &&
+            this.model === other.model;
+    };
     return Product;
 }());
 exports.default = Product;
